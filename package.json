@@ -8,5 +8,20 @@
     "mongoose": "^6.1.7",
     "nodemon": "^2.0.15",
     "validator": "^13.7.0"
-  }
+  },
+  "name": "bankapi-fullstack",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
