@@ -16,3 +16,4 @@ const User = mongoose.model("User", {
     min: 0,
   },
 });
+module.exports = User;
