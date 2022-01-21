@@ -11,11 +11,11 @@
   },
   "name": "bankapi-fullstack",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "sercer/server.js",
   "devDependencies": {},
   "scripts": {
-    "start": "node app.js",
-    "server": "nodemon app.js",
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
