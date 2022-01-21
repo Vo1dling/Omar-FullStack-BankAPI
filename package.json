@@ -11,7 +11,7 @@
   },
   "name": "bankapi-fullstack",
   "version": "1.0.0",
-  "main": "server/server.js",
+  "main": "index.js",
   "devDependencies": {},
   "scripts": {
     "start": "node server/server.js",
