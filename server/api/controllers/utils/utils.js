@@ -1,5 +1,8 @@
 const User = require("../../../models/user");
 const path = require("path");
+const getReact = () => {
+  return path.resolve(__dirname, "../../../../client/build");
+};
 
 const getData = async (id) => {
   let users = [];
@@ -58,4 +61,5 @@ module.exports = {
   deposit,
   updateCredit,
   transfer,
+  getReact,
 };
