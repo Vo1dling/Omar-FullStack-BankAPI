@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import api from "./api/api";
+import Spinner from "./components/Spinner/Spinner.components";
+import ItemView from "./components/ItemView/ItemView.components";
+import CustomInput from "./components/CustomInput/CustomInput.components";
+import CustomButton from "./components/CustomButton/CustomButton.components";
+import Popup from "./components/Popup/Popup.components";
+import "./App.css";
+import { getUsers } from "./utils/utils";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [data, setData] = useState([]);
+  const getData = () => {
+    const users = getUsers();
+    console.log(users);
+  };
+  useEffect(() => {
+    getData();
+  }, []);
+  return <div></div>;
 }
-
 export default App;
