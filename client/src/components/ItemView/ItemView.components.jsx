@@ -1,21 +1,23 @@
 import React from "react";
 import CustomButton from "../CustomButton/CustomButton.components";
 import "./ItemView.styles.css";
-const ItemView = ({ item, deleteItem, editItem }) => {
-  const { name, price, size, id } = item;
+const ItemView = ({ user, showPopup }) => {
+  const { name, credit, cash } = user;
   return (
     <div style={{ border: "3px solid black" }} className="item-view">
-      <h3>Brand : {name}</h3>
-      <p>Size : {size}</p>
-      <p>Price : {price}$</p>
-      <p>ID: {id}</p>
+      <h3>Name : {name}</h3>
+      <p>Cash : {cash}&#8362;</p>
+      <p>Credit : {credit}&#8362;</p>
+
       <div className="button-container">
-        <CustomButton onClick={editItem} id={id} edit="true">
-          <i className="fas fa-edit" style={{ pointerEvents: "none" }}></i>
-        </CustomButton>
-        <CustomButton onClick={deleteItem} id={id}>
-          <i className="fas fa-trash" style={{ pointerEvents: "none" }}></i>
-        </CustomButton>
+        <CustomButton onClick={showPopup} userid={user._id} text="Deposit" />
+        <CustomButton onClick={showPopup} userid={user._id} text="Withdraw" />
+        <CustomButton onClick={showPopup} userid={user._id} text="Transfer" />
+        <CustomButton
+          onClick={showPopup}
+          userid={user._id}
+          text="Update Credit"
+        />
       </div>
     </div>
   );

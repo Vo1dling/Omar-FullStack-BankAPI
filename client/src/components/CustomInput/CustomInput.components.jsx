@@ -1,6 +1,27 @@
 import React from "react";
-
-const CustomInput = React.forwardRef(({ type, onChange, placeHolder }, ref) => (
-  <input type={type} onChange={onChange} placeholder={placeHolder} ref={ref} />
-));
+const CustomInput = ({
+  type,
+  onChange,
+  placeHolder,
+  label,
+  name,
+  inputRef,
+  required,
+}) => {
+  return (
+    <div className="input">
+      <label htmlFor={name}>
+        {label} <span className="red">{required ? "*" : ""}</span>
+      </label>
+      <input
+        type={type}
+        onChange={onChange}
+        placeholder={placeHolder}
+        id={name}
+        onClick={(e) => e.stopPropagation()}
+        ref={inputRef}
+      />
+    </div>
+  );
+};
 export default CustomInput;

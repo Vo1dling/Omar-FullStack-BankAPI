@@ -1,0 +1,37 @@
+.list-container {
+  display: grid;
+  width: 100%;
+  margin-top: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 0.5rem;
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0;
+}
+.flex-container button {
+  width: 30%;
+  height: 10vh;
+  font-size: 1.5rem;
+}
+.button-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.button-container button {
+  margin: 0 0.5rem;
+}
+.add {
+  background-color: gold;
+}
+.empty-input {
+  border: 2px solid red;
+}
+button i {
+  pointer-events: none;
+}
